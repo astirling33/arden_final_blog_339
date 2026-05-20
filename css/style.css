@@ -1,0 +1,300 @@
+/* =========================
+   GENERAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F5F5;
+    color: #06412A;
+}
+
+/* fonts */
+
+.almendra-bold {
+  font-family: "Almendra", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 30px;
+  color: #003d14;
+}
+
+/* =========================
+   HOME PAGE
+========================= */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+}
+
+/* Overlay Links */
+
+.overlay-links {
+    font-family: "Almendra", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+}
+
+.overlay-links a {
+    position: absolute;
+    text-decoration: none;
+    color: #06412A;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.overlay-links a:hover {
+    color: #D17A22;
+    transform: translateX(10px);
+}
+
+/* Specific Link Positions */
+
+.hikes-link {
+    right: 80%;
+    bottom: 80%;
+}
+
+.gardens-link {
+    top: 80%;
+    left: 18%;
+}
+
+.museums-link {
+    top: 55%;
+    left: 10%;
+}
+
+.landmarks-link {
+    top: 68%;
+    left: 20%;
+}
+
+/* Gallery Link */
+
+.gallery-link-container {
+    text-align: center;
+    padding: 40px;
+    background-color: #9AB6AB;
+}
+
+.gallery-link {
+    font-family: "Almendra", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+    color: #06412A;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.gallery-link:hover {
+    color: #D17A22;
+}
+
+/* =========================
+   ADAPTIVE NAVBAR
+========================= */
+
+.navbar {
+    width: 100%;
+    background-color: #9AB6AB;
+    padding: 10px 5%; /* Slightly less padding for a cleaner row */
+    position: relative;
+    z-index: 1000;
+}
+
+.nav-menu-container {
+    display: flex;
+    justify-content: space-between; /* This pushes icon left, links right */
+    align-items: center;           /* Keeps them perfectly centered vertically */
+    width: 100%;
+}
+
+/* The Icon Button */
+.nav-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 45px !important; /* Slightly smaller for desktop row alignment */
+    color: #F5F5F5;
+    transition: 0.3s ease;
+    text-decoration: none;
+    display: block; 
+}
+
+.nav-toggle:hover {
+    color: #D17A22;
+    transform: translateY(-3px);
+}
+
+/* Standard Desktop Links */
+.nav-right {
+    display: flex;
+    gap: 30px;
+    font-family: "Almendra", serif;
+    font-weight: 700;
+    font-size: 22px;
+    align-items: center; /* Ensure text is vertically centered with icon */
+}
+
+/* Hide the word "Home" on desktop */
+.nav-right .home-link {
+    display: none;
+}
+
+.nav-right a {
+    text-decoration: none;
+    color: #F5F5F5;
+    transition: 0.3s ease;
+}
+
+.nav-right a:hover {
+    color: #D17A22;
+    transform: translateY(-3px);
+}
+
+/* =========================
+   MOBILE STATE (Under 768px)
+========================= */
+@media (max-width: 768px) {
+    .nav-menu-container {
+        justify-content: flex-start; /* Keep icon on left for mobile too */
+    }
+
+    .nav-toggle {
+        font-size: 40px !important;
+    }
+
+    .nav-right {
+        display: none; 
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 250px;
+        flex-direction: column;
+        background-color: #9AB6AB;
+        gap: 0;
+        box-shadow: 4px 4px 10px rgba(0,0,0,0.1);
+        align-items: flex-start; /* Align text to left in mobile dropdown */
+    }
+
+    .nav-right .home-link {
+        display: block; /* Bring back Home for mobile */
+    }
+    /* Show links when hovering over the container or navbar */
+
+    .nav-right.show {
+    display: flex;
+    }
+
+    .nav-right a {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    width: 100%;
+
+    }
+
+
+    .nav-right a:hover {
+    background-color: #06412A;
+    }
+
+
+    .nav-right .home-link {
+    display: block; /* Show "Home" on mobile */
+    }
+
+    .nav-toggle:active {
+    color: #D17A22;
+    }
+}
+
+/* =========================
+   PAGE HEADER
+========================= */
+
+.page-header {
+    padding: 80px 10%;
+    background-color: #9AB6AB;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    color: #06412A;
+}
+
+/* =========================
+   CONTENT SECTIONS
+========================= */
+
+.content {
+    padding: 60px 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.text-section h2 {
+    margin-bottom: 20px;
+    color: #336652;
+}
+
+.text-section p {
+    line-height: 1.8;
+    max-width: 800px;
+}
+
+.image-section img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 12px;
+    border: 5px solid #9AB6AB;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+/* when screen small */
+
+@media (max-width: 768px) {
+
+    .overlay-links {
+        left: 5%;
+    }
+
+    .overlay-links a {
+        font-size: 1.8rem;
+    }
+
+    .nav-right {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+}
