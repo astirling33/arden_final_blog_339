@@ -1,1 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hikes</title>
+    <link rel="stylesheet" href="css/style.css">
 
+    <!-- Font Awesome for Home Icon -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Amarante&family=Yrsa:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+
+    <!-- icon icon iiii icon con-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=nest_farsight_seasonal" />
+</head>
+
+<body>
+<nav class="navbar">
+    <div class="nav-menu-container">
+        <!-- Clicking this on desktop goes home, hovering on mobile opens menu -->
+        <a href="index.html" id="navToggle" class="nav-toggle material-symbols-outlined">
+            nest_farsight_seasonal
+        </a>
+
+        <div class="nav-right">
+            <a href="index.html" class="home-link">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="gardens.html">Gardens</a>
+            <a href="hikes.html">Hikes</a>
+            <a href="landmarks.html">Landmarks</a>
+            <a href="museums.html">Museums</a>
+        </div>
+    </div>
+</nav>
+
+    <header class="page-header">
+        <h1>Hikes</h1>
+    </header>
+
+    <main class="content">
+
+        <section class="text-section">
+            <h2>Section Header</h2>
+            <p>
+                Placeholder text goes here. Add descriptions,
+                travel information, stories, or recommendations.
+            </p>
+        </section>
+
+        <section class="image-section">
+            <img src="images/placeholder.jpg" alt="Placeholder Image">
+        </section>
+
+        <section class="text-section">
+            <h2>Another Header</h2>
+            <p>
+                More placeholder content for future customization.
+            </p>
+        </section>
+
+    </main>
+
+        <script>
+        const navToggle = document.getElementById('navToggle');
+        const navRight = document.querySelector('.nav-right');
+
+        navToggle.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                // Prevent navigating to index.html on mobile
+                e.preventDefault(); 
+                
+                // Toggle the dropdown menu
+                navRight.classList.toggle('show');
+                console.log("Mobile menu toggled");
+            }
+        });
+
+        // Close the menu when a link is clicked
+        navRight.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                navRight.classList.remove('show');
+            }
+        });
+        </script>
+
+
+</body>
+</html> 
