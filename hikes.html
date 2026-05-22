@@ -1,30 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hikes</title>
-    <link rel="stylesheet" href="css/style.css">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hikes</title>
+        <link rel="stylesheet" href="css/style.css">
 
-    <!-- Font Awesome for Home Icon -->
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <!-- Font Awesome for Home Icon -->
+        <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Amarante&family=Yrsa:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Amarante&family=Yrsa:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
 
-    <!-- icon icon iiii icon con-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-</head>
+        <!-- icon icon iiii icon con-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    </head>
 
-<body>
-<nav class="navbar">
+    <body>
+    <a class="skip-link" href="#main">Skip to Main Content</a>
+
+    <nav class="navbar">
     <div class="nav-menu-container">
         <!-- Clicking this on desktop goes home, hovering on mobile opens menu -->
-        <a href="index.html" id="navToggle" class="nav-toggle material-symbols-outlined">
-            nest_farsight_seasonal
+        <a href="index.html" 
+        id="navToggle" 
+        class="nav-toggle material-symbols-outlined" 
+        role="button" 
+        aria-label="Go to Home Page">
+        nest_farsight_seasonal
         </a>
 
         <div class="nav-right">
@@ -43,7 +49,7 @@
         <span class="material-symbols-outlined header-icon">landscape_2</span>
     </header>
 
-    <main class="content">
+    <main id="main-content" class="content">
 
         <section class="text-section">
 
@@ -69,6 +75,22 @@
 
                 <img src="Images/hikes/cliffs-of-moher.jpeg" alt="steep cliffs and with crashing waves and Obrien’s tower in the distance">
 
+            </div>
+
+            <div class="card">
+                <img src="Images/hikes/glendalough-spinc.jpeg" alt="girl standing on rocks in the middle of a lake in the center of a mountain valley in upper lake in glendalough">
+                <div class="card-text">
+                    <h2>Glendalough Mini Spinc Trail</h2>
+                    <p>Ireland is incredibly lush in the spring, and I think Glendalough is the best example of that. It felt like the rocks were taken straight out of totoro's forest, every tree had a whimsical twist and small flowers sparkled at every corner. There were so many trails, some paved and flat, others taking you to the top of the mountain ridge. I took the mini Spinc trail with Olivia, and we were out of breath by the time we reached the top, but it was a stunning view of the ridge in the middle of the Glendalough valley. From the top you could see the two lakes shimmering like gems in the midday sun, cliffs plunging down to meet them and rolling hills all around covered in tall pine trees and old oak. At the end of our hike Olivia and I eavesdropped on a tour of the monastery and ate pillowy henry hippos that made my hands sticky rain. I learned about the round towers (for escaping vikings) and the celtic symbology used to teach an illiterate population about christianity. Yew trees looked like they were out of a tapestry but they were actually from France, imported by Norman invaders and used to ward off wolves from the fresh dead in the graves. In the heart of the valley, in the priest's house still standing and the gravestones around me, I thought of the people who lived here many years ago, and of myself still enjoying the quiet mist in the valley today.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-text">
+                    <h2>Howth Cliff Walk</h2>
+                    <p>This walk was my introduction to the wonders of Ireland's natural landscape. I went with Camilla at around 5:00 and we stayed for a sunset that bathed Howth and its rolling hills in gold. The air was fresh and views seemed to get better by the minute. The weather was perfectly clear, and the people here were kind and helpful. Beshoff Bros is a fish and chip place I found in my tourist book and it was probably the best fish and chips I've ever had. They serve the whole fish on a bed of crispy chips and give you a choice of sauces and a lemon wedge. The ease of getting on the dart, the food, and the natural beauty of this little town make it my favorite hike close to Dublin.</p>
+                </div>
+                <img src="Images/hikes/howth-cliffwalk.jpeg" alt="small boat in the ocean and sunset lighting up foliage in howth cliff walk">
             </div>
 
 
@@ -118,6 +140,19 @@
         <script>
         const navToggle = document.getElementById('navToggle');
         const navRight = document.querySelector('.nav-right');
+        
+        function updateAriaLabels() {
+            if (window.innerWidth <= 768) {
+                // Mobile State: It's a Menu
+                const isOpen = navRight.classList.contains('show');
+                navToggle.setAttribute('aria-label', isOpen ? 'Close Menu' : 'Open Menu');
+                navToggle.setAttribute('aria-expanded', isOpen);
+            } else {
+                // Desktop State: It's a Home Link
+                navToggle.setAttribute('aria-label', 'Go to Home Page');
+                navToggle.removeAttribute('aria-expanded');
+            }
+        }
 
         navToggle.addEventListener('click', function(e) {
             if (window.innerWidth <= 768) {
@@ -129,6 +164,9 @@
                 console.log("Mobile menu toggled");
             }
         });
+
+        window.addEventListener('resize', updateAriaLabels);
+        updateAriaLabels();
 
         // Close the menu when a link is clicked
         navRight.addEventListener('click', function() {
