@@ -1,6 +1,4 @@
-/* =========================
-   GENERAL STYLES
-========================= */
+/* general styles */                                                                             
 
 * {
     margin: 0;
@@ -41,6 +39,59 @@ body {
   font-weight: normal;
   font-style: normal;
 }
+
+/* =========================
+   UNIVERSAL FOCUS STYLES
+========================= */
+
+/* Target all focusable elements (links, buttons, inputs) */
+:focus-visible {
+    /* Remove default browser outline */
+    outline: none; 
+    
+    /* Apply your brand style */
+    outline: 4px dashed #C790B4 !important;
+    outline-offset: 4px; /* Creates space between element and dashed line */
+    border-radius: 4px;
+    
+    /* Optional: subtle lift effect */
+    transform: translateY(-2px);
+    transition: transform 0.2s ease, outline 0.2s ease;
+}
+
+/* Ensure images/cards with links don't have clashing outlines */
+a:focus-visible img {
+    outline: 4px dashed #F5C21B; /* Matches your card's yellow accent */
+    outline-offset: 8px;
+}
+
+/* -------------------- */
+/* SKIP TO MAIN CONTENT */
+
+.skip-link {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 2000; 
+    transform: translateY(-200%);
+    transition: transform 0.3s ease;
+    text-decoration: none;
+
+    font-family: "Almendra", serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #688E79;
+    background-color: #ffffff;
+    padding: 15px 25px;
+    border-radius: 10%;
+    
+    border: 3px solid #C790B4;
+}
+.skip-link:focus {
+    transform: translateY(0%);
+    color: #AAB1E4; /* Matching your hover state color */
+}
+
 
 /* ------------ */
 /* card styles */
@@ -666,5 +717,44 @@ footer {
     display: none;
 }
 
+/* skip to main content not needed */
 
+.skip-link {
+        display: none;
+    }
+
+}
+
+/* reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+    /* no scrolling animation */
+    .scroller-inner {
+        animation: none !important;
+        white-space: normal !important;
+    }
+
+    /* Disables all transitions */
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    /* Remove transforms that move elements */
+    .overlay-links a:hover,
+    .nav-toggle:hover,
+    .nav-right a:hover,
+    #myBtn:hover,
+    :focus-visible {
+        transform: none !important;
+    }
+
+    /* Fix the skip link so it appears instantly without sliding */
+    .skip-link {
+        transition: none !important;
+    }
 }
