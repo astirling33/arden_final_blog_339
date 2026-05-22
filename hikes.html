@@ -76,6 +76,45 @@
 
     </main>
 
+    <footer>
+        <div class="footer-top">
+        <!-- Scroll to Top Button (Styles matched to your overlay links) -->
+        <button onclick="topFunction()" id="myBtn" title="Go to top">
+            <span class="material-symbols-outlined">north</span> Top
+        </button>
+    </div>
+
+    <!-- Scrolling Icon Row -->
+    <div class="icon-scroller">
+            <div class="scroller-inner">
+            <span class="material-symbols-outlined icon-1">landscape_2</span>
+            <span class="material-symbols-outlined icon-2">nature</span>
+            <span class="material-symbols-outlined icon-3">book_2</span>
+            <span class="material-symbols-outlined icon-4">fort</span>
+            <span class="material-symbols-outlined icon-5">nest_farsight_seasonal</span>
+            
+            <span class="material-symbols-outlined icon-1">landscape_2</span>
+            <span class="material-symbols-outlined icon-2">nature</span>
+            <span class="material-symbols-outlined icon-3">book_2</span>
+            <span class="material-symbols-outlined icon-4">fort</span>
+            <span class="material-symbols-outlined icon-5">nest_farsight_seasonal</span>
+
+            <span class="material-symbols-outlined icon-1">landscape_2</span>
+            <span class="material-symbols-outlined icon-2">nature</span>
+            <span class="material-symbols-outlined icon-3">book_2</span>
+            <span class="material-symbols-outlined icon-4">fort</span>
+            <span class="material-symbols-outlined icon-5">nest_farsight_seasonal</span>
+
+            <span class="material-symbols-outlined icon-1">landscape_2</span>
+            <span class="material-symbols-outlined icon-2">nature</span>
+            <span class="material-symbols-outlined icon-3">book_2</span>
+            <span class="material-symbols-outlined icon-4">fort</span>
+            <span class="material-symbols-outlined icon-5">nest_farsight_seasonal</span>
+        </div>
+    </div>
+
+    </footer>
+
         <script>
         const navToggle = document.getElementById('navToggle');
         const navRight = document.querySelector('.nav-right');
@@ -97,6 +136,27 @@
                 navRight.classList.remove('show');
             }
         });
+
+        //scroll to top button//
+        // Get the button
+        let mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        }
         </script>
 
 
