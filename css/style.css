@@ -10,18 +10,97 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #F5F5F5;
-    color: #06412A;
+    background-color: #dae1f1;
 }
 
 /* fonts */
 
+/* title */
 .almendra-bold {
   font-family: "Almendra", serif;
   font-weight: 700;
   font-style: normal;
   font-size: 30px;
   color: #003d14;
+}
+/* h2 */
+
+.amarante-regular {
+  font-family: "Amarante", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* paragraph */
+
+.yrsa-paragraph {
+  font-family: "Yrsa", serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ------------ */
+/* card styles */
+/* ------------ */
+
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: stretch; 
+    gap: 50px;
+    padding: 40px;
+    max-width: 1300px;
+
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 10px 10px 0px 0px #57638A;
+    border: 2px solid #57638A;
+
+}
+
+.card img{
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    
+    width: 47.5%;
+    border-radius: 10px;
+    border: 4px dashed #57638A; 
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    color: #06412A;
+}
+
+.card-text h2 {
+  font-family: "Amarante", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 40px;
+}
+
+.card-text p {
+  font-family: "Yrsa", serif;
+  font-size: 20px
+}
+
+.card-text::before {
+    content: "";
+    position: absolute;
+    top: 0.5%;    
+    bottom: 0.5%;
+    left: -25px; 
+    
+    border-left: 8px double #C790B4; 
+}
+.card:nth-of-type(even) .card-text::before {
+    left: auto;
+    right: -25px;
 }
 
 /* =========================
@@ -119,7 +198,7 @@ body {
 
 .navbar {
     width: 100%;
-    background-color: #9AB6AB;
+    background-color: #376852;
     padding: 10px 5%; /* Slightly less padding for a cleaner row */
     position: relative;
     z-index: 1000;
@@ -178,6 +257,7 @@ body {
 /* =========================
    MOBILE STATE (Under 768px)
 ========================= */
+
 @media (max-width: 768px) {
     .nav-menu-container {
         justify-content: flex-start; /* Keep icon on left for mobile too */
@@ -229,20 +309,59 @@ body {
     .nav-toggle:active {
     color: #D17A22;
     }
+
+    /* Card styles for mobile */
+
+    .card {
+        display: flex;
+        flex-direction: column; 
+        align-content: center;
+
+        gap: 50px;
+        padding: 25px;
+        background-color: #9AB6AB;
+    }
+
+    .card img{
+        aspect-ratio: 1;
+        object-fit: cover;
+        width: 100%
+        
+    }
+
+    .card-text {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
 }
+
 
 /* =========================
    PAGE HEADER
 ========================= */
 
 .page-header {
-    padding: 80px 10%;
-    background-color: #9AB6AB;
+    display: flex;
+    padding: 10px 10%;
+    background-color: #688E79;
+    justify-content: flex-end; 
+    align-items: center;
+    gap: 40px
 }
 
+.header-icon {
+    font-size: 80px !important;
+    color: #003d14;
+}
+
+
 .page-header h1 {
-    font-size: 3rem;
-    color: #06412A;
+  font-family: "Almendra", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 110px;
+  color: #003d14;
 }
 
 /* =========================
@@ -250,20 +369,26 @@ body {
 ========================= */
 
 .content {
-    padding: 60px 10%;
+    padding: 40px 4%;
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    align-items: center;
+    gap: 300px;
 }
 
+.text-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
 .text-section h2 {
-    margin-bottom: 20px;
-    color: #336652;
+    margin-bottom: 12px;
+    color: #376852;
 }
 
 .text-section p {
     line-height: 1.8;
-    max-width: 800px;
+    max-width: 1000px;
 }
 
 .image-section img {
@@ -271,7 +396,7 @@ body {
     max-width: 900px;
     height: auto;
     border-radius: 12px;
-    border: 5px solid #9AB6AB;
+    border: 5px solid #AAB1E4;
 }
 
 /* =========================
