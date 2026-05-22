@@ -92,6 +92,14 @@ a:focus-visible img {
     color: #AAB1E4; /* Matching your hover state color */
 }
 
+/* gallery styling */
+
+.gallery {
+    display: grid;
+    grid-template-columns: 30%;
+    border: 2px solid rgb(51, 84, 203);
+}
+
 
 /* ------------ */
 /* card styles */
@@ -133,11 +141,31 @@ a:focus-visible img {
 }
 
 .card-text h2 {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  gap: 8px; 
+
   font-family: "Amarante", serif;
   font-weight: 500;
   font-style: normal;
   font-size: 40px;
 }
+
+/* Add the drone icon after card headers */
+.card-text h2::before {
+    content: "drone_2"; 
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 40px; 
+    
+    /* CHANGE THESE */
+    display: inline-block; 
+    line-height: 1;
+    color: #376852; 
+}
+
 
 .card-text p {
   font-family: "Yrsa", serif;
@@ -504,10 +532,12 @@ footer {
 
 /* Colors for Icons */
 .icon-1 { color: #57638A; }
-.icon-2 { color: #688E79; }
+.icon-2 { color: #207b27; }
 .icon-3 { color: #C790B4; }
 .icon-4 { color: #D17A22; }
 .icon-5 { color: #376852; }
+.icon-6 { color: #688E79; } 
+.icon-7 { color: #AAB1E4; }
 
 /* The Animation */
 @keyframes scrollIcons {
