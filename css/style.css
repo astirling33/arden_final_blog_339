@@ -66,7 +66,9 @@ body {
     
     width: 47.5%;
     border-radius: 10px;
-    border: 4px dashed #57638A; 
+
+    outline: 2px solid #F5C21B;
+    border: 6px dashed #F5C21B;
 }
 
 .card-text {
@@ -224,7 +226,7 @@ body {
 }
 
 .nav-toggle:hover {
-    color: #D17A22;
+    color: #AAB1E4;
     transform: translateY(-3px);
 }
 
@@ -250,7 +252,7 @@ body {
 }
 
 .nav-right a:hover {
-    color: #D17A22;
+    color: #AAB1E4;
     transform: translateY(-3px);
 }
 
@@ -344,15 +346,36 @@ body {
 .page-header {
     display: flex;
     padding: 10px 10%;
-    background-color: #688E79;
+    background-color: #F5F5F5;
     justify-content: flex-end; 
     align-items: center;
-    gap: 40px
+    gap: 40px;
+
+    border-top: 5px solid #D17A22;
+    outline: 10px double #ffffff;
 }
 
 .header-icon {
     font-size: 80px !important;
-    color: #003d14;
+    color: #ffffff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+
+    line-height: 1;
+    text-align: center;
+    overflow: hidden;
+
+    background-color: #F5C21B;
+    border-radius: 5%;
+    border: 3px solid #C790B4;
+    outline: 5.5px dashed #C790B4;
 }
 
 
@@ -361,7 +384,7 @@ body {
   font-weight: 700;
   font-style: normal;
   font-size: 110px;
-  color: #003d14;
+  color: #688E79;
 }
 
 /* =========================
