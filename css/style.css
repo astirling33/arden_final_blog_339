@@ -322,7 +322,7 @@ body {
 
 .header-icon {
     font-size: 80px !important;
-    color: #ffffff;
+    color: #C790B4;
 
     display: flex;
     justify-content: center;
@@ -337,10 +337,10 @@ body {
     text-align: center;
     overflow: hidden;
 
-    background-color: #F5C21B;
+    background-color: #ffffff;
     border-radius: 5%;
-    border: 3px solid #C790B4;
-    outline: 5.5px dashed #C790B4;
+    border: 3px solid #D17A22;
+    outline: 5.5px dashed #D17A22;
 }
 
 
@@ -385,6 +385,83 @@ body {
     height: auto;
     border-radius: 12px;
     border: 5px solid #AAB1E4;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color:#688E79; 
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden; /* no horizontal scroll */
+    border-top: 5px solid #D17A22;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: end;
+    padding: 0 5%;
+    margin-bottom: 20px;
+    
+}
+
+#myBtn {
+    display: none; /* Controlled by your JS */
+    background-color: #ffffff;
+    color: #688E79;
+    outline: 4px dashed #376852;
+    border: 3px solid #376852;
+    padding: 10px 20px;
+    border-radius: 10%;
+    font-family: "Almendra", serif;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    
+    /* Aligning icon and text */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#myBtn:hover {
+    color: #AAB1E4;
+    transform: translateX(10px); 
+}
+
+/* Moving Icons Container */
+.icon-scroller {
+    background-color:#F5F5F5;
+    width: 100%;
+    padding: 20px 0;
+    white-space: nowrap;
+    position: relative;
+}
+
+.scroller-inner {
+    display: inline-block;
+    animation: scrollIcons 30s linear infinite; 
+}
+
+.scroller-inner span {
+    font-size: 50px;
+    margin-right: 25px; /* Space between icons */
+}
+
+/* Colors for Icons */
+.icon-1 { color: #57638A; }
+.icon-2 { color: #688E79; }
+.icon-3 { color: #C790B4; }
+.icon-4 { color: #D17A22; }
+.icon-5 { color: #376852; }
+
+/* The Animation */
+@keyframes scrollIcons {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); } /* Scrolls half the width of the inner div */
 }
 
 /* =========================
@@ -518,7 +595,7 @@ body {
     .header-icon {
     
     font-size: 40px !important;
-    color: #ffffff;
+    color: #C790B4;
 
     display: flex;
     justify-content: center;
@@ -533,10 +610,10 @@ body {
     text-align: center;
     overflow: hidden;
 
-    background-color: #F5C21B;
+    background-color: #ffffff;
     border-radius: 5%;
-    border: 3px solid #C790B4;
-    outline: 5.5px dashed #C790B4;
+    border: 3px solid #D17A22;
+    outline: 5.5px dashed #D17A22;
 }
 
 /* mobile home page */
@@ -580,6 +657,12 @@ body {
 }
 
 .gallery-link-container::after{
+    display: none;
+}
+
+/* footer */
+
+.footer-top {
     display: none;
 }
 
