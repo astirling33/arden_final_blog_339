@@ -580,7 +580,7 @@ body {
 }
 
 .gallery-link-container::after{
-    top: 99%;
+    display: none;
 }
 
 
