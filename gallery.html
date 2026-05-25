@@ -18,6 +18,9 @@
 
         <!-- icon icon iiii icon con-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+        <!-- lightbox link -->
+        <link href="dist/css/lightbox.css" rel="stylesheet" />
     </head>
 
     <body>
@@ -50,44 +53,89 @@
         <span class="material-symbols-outlined header-icon">photo_prints</span>
     </header>
 
-    <main id="main-content" class="content">
-        <div class="gallery">
-            <a href="Images/gallery/bray-fairy-rock.jpeg" data-lightbox="gallery" data-title="A hidden fairy rock found along the coast of Bray">
-                <img src="Images/gallery/bray-fairy-rock.jpeg" alt="A close up of a small painted fairy rock nestled among gray stones on the beach" class="gallery-item">
-            </a>
+<main id="main-content" class="content">
+    <!-- Filter Controls -->
+    <div class="controls">
+        <button type="button" class="control" data-filter="all">All</button>
+        <button type="button" class="control" data-filter=".photo">Photos</button>
+        <button type="button" class="control" data-filter=".sketch">Sketches</button>
+        <button type="button" class="control" data-filter=".video">Videos</button>
+    </div>
 
-            <a href="Images/gallery/dart-train-to-...with-cami.jpeg" data-lightbox="gallery" data-title="Taking the DART train with Camilla">
-                <img src="Images/gallery/dart-train-to-...with-cami.jpeg" alt="A scenic view looking out the window of a DART train moving along the Irish coastline" class="gallery-item">
-            </a>
+    <!-- Restructured Gallery Container -->
+    <div class="gallery container">
+        
+       <a href="Images/gallery/Bray-fairy-rock.jpeg" class="mix photo" data-lightbox="gallery" data-title="A hidden fairy rock found along the coast of Bray">
+            <img src="Images/gallery/Bray-fairy-rock.jpeg" alt="rock with beach behind it" class="gallery-item">
+        </a>
 
-            <a href="Images/gallery/fáilte-mailbox.jpeg" data-lightbox="gallery" data-title="A traditional green Irish mailbox featuring the word Fáilte">
-                <img src="Images/gallery/fáilte-mailbox.jpeg" alt="A classic green Victorian-style Irish post box with the word Fáilte cast into the metalwork" class="gallery-item">
-            </a>
+        <a href="Images/gallery/Deer-pheonix-park.jpg" class="mix photo" data-lightbox="gallery" data-title="Spotting deer in Phoenix Park">
+            <img src="Images/gallery/Deer-pheonix-park.jpg" alt="group in front of deer in phoenix park" class="gallery-item">
+        </a>
 
-            <a href="Images/gallery/ginos-crepe-&-gelato.jpeg" data-lightbox="gallery" data-title="Sweet treats at Gino's Gelato">
-                <img src="Images/gallery/ginos-crepe-&-gelato.jpeg" alt="A freshly made warm crepe and a scoop of artisan gelato served in a paper cup" class="gallery-item">
-            </a>
+        <a href="Images/gallery/fáilte-mailbox.jpeg" class="mix photo" data-lightbox="gallery" data-title="Irish welcome mailbox">
+            <img src="Images/gallery/fáilte-mailbox.jpeg" alt="mailbox with clover and fáilte on it meaning welcome in Irish" class="gallery-item">
+        </a>
 
-            <a href="Images/gallery/lover-tarot-street-art.jpeg" data-lightbox="gallery" data-title="The Lovers tarot card street art in Dublin">
-                <img src="Images/gallery/lover-tarot-street-art.jpeg" alt="Colorful urban street art mural depicting The Lovers tarot card on a brick wall" class="gallery-item">
-            </a>
+        <a href="Images/gallery/Cliffs-of-moher-group.JPG" class="mix photo" data-lightbox="gallery" data-title="Group photo at the Cliffs of Moher">
+            <img src="Images/gallery/Cliffs-of-moher-group.JPG" alt="group standing in front of the cliffs of moher" class="gallery-item">
+        </a>
 
-            <a href="Images/gallery/st-patricks-park-sketch.jpeg" data-lightbox="gallery" data-title="Ink and watercolor sketch of St. Patrick's Park">
-                <img src="Images/gallery/st-patricks-park-sketch.jpeg" alt="A hand-drawn sketchbook page with a delicate ink drawing of the cathedral spire from St. Patrick's Park" class="gallery-item">
-            </a>
+        <a href="Images/gallery/ginos-crepe-&-gelato.jpeg" class="mix photo" data-lightbox="gallery" data-title="Gino's Gelato and Crepe treats">
+            <img src="Images/gallery/ginos-crepe-&-gelato.jpeg" alt="lemon blueberry cheesecake gelato with lemon and sugar crepe" class="gallery-item">
+        </a>
 
-            <a href="Images/gallery/staycity-view.jpeg" data-lightbox="gallery" data-title="Morning view from the StayCity apartment window">
-                <img src="Images/gallery/staycity-view.jpeg" alt="Light streaming through an apartment window overlooking the historic streets and rooftops of Dublin" class="gallery-item">
-            </a>
+        <a href="Images/gallery/lover-tarot-street-art.jpeg" class="mix photo" data-lightbox="gallery" data-title="Street art in Dublin">
+            <img src="Images/gallery/lover-tarot-street-art.jpeg" alt="street art in the style of the lovers tarot card, with the image being two pigeons making a heart with their beaks" class="gallery-item">
+        </a>
 
-            <a href="Images/gallery/trinity-college.jpeg" data-lightbox="gallery" data-title="The majestic architecture of Trinity College Dublin">
-                <img src="Images/gallery/trinity-college.jpeg" alt="An open book held up against the historic stone buildings and courtyard of Trinity College" class="gallery-item">
-            </a>
-            
-        </div>
-    </main>
+        <a href="Images/gallery/staycity-view.jpeg" class="mix photo" data-lightbox="gallery" data-title="View from Staycity Aparthotels">
+            <img src="Images/gallery/staycity-view.jpeg" alt="view from staycity aparthotels, small balcony looks out to a road, catholic church, park and some shops." class="gallery-item">
+        </a>
 
-    <script src="dist/js/lightbox-plus-jquery.min.js"></script>
+        <a href="Images/gallery/boat-to-inishmore-group.jpeg" class="mix photo" data-lightbox="gallery" data-title="On the ferry to Inishmore">
+            <img src="Images/gallery/boat-to-inishmore-group.jpeg" alt="group on a boat in raincoats headed to Inishmore" class="gallery-item">
+        </a>
+
+        <a href="Images/gallery/spinc-peak.jpeg" class="mix photo" data-lightbox="gallery" data-title="At the top of the mini Spinc loop in Glendalough">
+            <img src="Images/gallery/spinc-peak.jpeg" alt="girl at the top of the mini Spinc loop in glendalough" class="gallery-item">
+        </a>
+
+        <a href="Images/gallery/Cat-outside-sushi-shop.jpeg" class="mix photo" data-lightbox="gallery" data-title="A friendly cat in The Liberties">
+            <img src="Images/gallery/Cat-outside-sushi-shop.jpeg" alt="cat with harlequin fur on a sidewalk in the liberties" class="gallery-item">
+        </a>
+
+        <a href="Images/gallery/Yellow-trail-giants-causeway.jpeg" class="mix photo" data-lightbox="gallery" data-title="Exploring the Giant's Causeway yellow trail">
+            <img src="Images/gallery/Yellow-trail-giants-causeway.jpeg" alt="girl in front of giants causeway cliffs" class="gallery-item">
+        </a>
+
+        <a href="Images/gallery/The-quays-bar-galway.jpeg" class="mix photo" data-lightbox="gallery" data-title="Enjoying The Quays Bar in Galway">
+            <img src="Images/gallery/The-quays-bar-galway.jpeg" alt="group at a quays bar in galway" class="gallery-item">
+        </a>
+
+
+        <a href="Images/illustrations/dart-train-to-malahide-with-cami.jpeg" class="mix sketch" data-lightbox="gallery" data-title="DART train ride to Malahide">
+            <img src="Images/illustrations/dart-train-to-malahide-with-cami.jpeg" alt="drawing of dart train to malahide with friend" class="gallery-item">
+        </a>
+
+        <a href="Images/illustrations/Boat-to-inishmore-sketch.jpeg" class="mix sketch" data-lightbox="gallery" data-title="Ferry sketch on the way to Inishmore">
+            <img src="Images/illustrations/Boat-to-inishmore-sketch.jpeg" alt="drawing of the back of the ferry boat to Inishmore" class="gallery-item">
+        </a>
+
+        <a href="Images/illustrations/Howth-cliffs-sketch.jpeg" class="mix sketch" data-lightbox="gallery" data-title="Sketch of the beautiful Howth Cliffs">
+            <img src="Images/illustrations/Howth-cliffs-sketch.jpeg" alt="sketch of cliffs of Howth and sea in background" class="gallery-item">
+        </a>
+
+        <a href="Images/illustrations/trinity-college.jpeg" class="mix sketch" data-lightbox="gallery" data-title="Memories from Trinity College courtyard">
+            <img src="Images/illustrations/trinity-college.jpeg" alt="sketch of things found in trinity college courtyard with the courtyard in the background" class="gallery-item">
+        </a>
+
+        <a href="Images/illustrations/st-patricks-park-sketch.jpeg" class="mix sketch" data-lightbox="gallery" data-title="Fountain sketch at St. Patrick's Park">
+            <img src="Images/illustrations/st-patricks-park-sketch.jpeg" alt="sketch of the fountain in the park next to st. patricks cathedral" class="gallery-item">
+        </a>
+
+    </div>
+</main>
 
  <footer>
         <div class="footer-top">
@@ -135,6 +183,87 @@
     </div>
 
     </footer>
-    
+
+
+    <script src="dist/js/lightbox-plus-jquery.min.js"></script>
+    <script src="mixitup.js"></script>
+
+
+    <script>
+        var containerEl = document.querySelector('.container');
+
+        var mixer = mixitup(containerEl, {
+            callbacks: {
+                onMixEnd: function(state) {
+                   
+                    state.hide.forEach(function(el) {
+                        el.removeAttribute('data-lightbox');
+                    });
+                    state.show.forEach(function(el) {
+                        el.setAttribute('data-lightbox', 'gallery');
+                    });
+                }
+            }
+        });
+
+        const navToggle = document.getElementById('navToggle');
+        const navRight = document.querySelector('.nav-right');
+        
+        function updateAriaLabels() {
+            if (window.innerWidth <= 768) {
+                // Mobile State: It's a Menu
+                const isOpen = navRight.classList.contains('show');
+                navToggle.setAttribute('aria-label', isOpen ? 'Close Menu' : 'Open Menu');
+                navToggle.setAttribute('aria-expanded', isOpen);
+            } else {
+                // Desktop State: It's a Home Link
+                navToggle.setAttribute('aria-label', 'Go to Home Page');
+                navToggle.removeAttribute('aria-expanded');
+            }
+        }
+
+        navToggle.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                // Prevent navigating to index.html on mobile
+                e.preventDefault(); 
+                
+                // Toggle the dropdown menu
+                navRight.classList.toggle('show');
+                console.log("Mobile menu toggled");
+            }
+        });
+
+        window.addEventListener('resize', updateAriaLabels);
+        updateAriaLabels();
+
+        // Close the menu when a link is clicked
+        navRight.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                navRight.classList.remove('show');
+            }
+        });
+
+        //scroll to top button//
+        // Get the button
+        let mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        }
+    </script>
+
 </body>
 </html>
