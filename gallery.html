@@ -24,7 +24,7 @@
     </head>
 
     <body>
-    <a class="skip-link" href="#main">Skip to Main Content</a>
+    <a class="skip-link" href="#main-content">Skip to Main Content</a>
 
     <nav class="navbar">
     <div class="nav-menu-container">
@@ -33,12 +33,12 @@
         id="navToggle" 
         class="nav-toggle material-symbols-outlined" 
         role="button" 
-        aria-label="Go to Home Page">
+        aria-label="Home">
         nest_farsight_seasonal
         </a>
 
         <div class="nav-right">
-            <a href="index.html" class="home-link">Home</a>
+            <a href="index.html" class="home-link" aria-hidden="true">Home</a>
             <a href="gallery.html">Gallery</a>
             <a href="gardens.html">Gardens</a>
             <a href="hikes.html">Hikes</a>
@@ -59,7 +59,7 @@
         <button type="button" class="control" data-filter="all">All</button>
         <button type="button" class="control" data-filter=".photo">Photos</button>
         <button type="button" class="control" data-filter=".sketch">Sketches</button>
-        <button type="button" class="control" data-filter=".video">Videos</button>
+        <!-- <button type="button" class="control" data-filter=".video">Videos</button> -->
     </div>
 
     <!-- Restructured Gallery Container -->
@@ -67,10 +67,6 @@
         
        <a href="Images/gallery/bray-fairy-rock.jpeg" class="mix photo" data-lightbox="gallery" data-title="A hidden fairy rock found along the coast of Bray">
             <img src="Images/gallery/bray-fairy-rock.jpeg" alt="rock with beach behind it" class="gallery-item">
-        </a>
-
-        <a href="Images/gallery/Deer-pheonix-park.jpg" class="mix photo" data-lightbox="gallery" data-title="Spotting deer in Phoenix Park">
-            <img src="Images/gallery/Deer-pheonix-park.jpg" alt="group in front of deer in phoenix park" class="gallery-item">
         </a>
 
         <a href="Images/gallery/fáilte-mailbox.jpeg" class="mix photo" data-lightbox="gallery" data-title="Irish welcome mailbox">
@@ -81,8 +77,16 @@
             <img src="Images/gallery/Cliffs-of-moher-group.JPG" alt="group standing in front of the cliffs of moher" class="gallery-item">
         </a>
 
+        <a href="Images/illustrations/Howth-cliffs-sketch.jpeg" class="mix sketch" data-lightbox="gallery" data-title="Sketch of the beautiful Howth Cliffs">
+            <img src="Images/illustrations/Howth-cliffs-sketch.jpeg" alt="sketch of cliffs of Howth and sea in background" class="gallery-item">
+        </a>
+
         <a href="Images/gallery/ginos-crepe-&-gelato.jpeg" class="mix photo" data-lightbox="gallery" data-title="Gino's Gelato and Crepe treats">
             <img src="Images/gallery/ginos-crepe-&-gelato.jpeg" alt="lemon blueberry cheesecake gelato with lemon and sugar crepe" class="gallery-item">
+        </a>
+
+        <a href="Images/illustrations/Belfast-Dublin-bus-sketch.jpg" class="mix sketch" data-lightbox="gallery" data-title="Bus from Belfast to Dublin">
+            <img src="Images/illustrations/Belfast-Dublin-bus-sketch.jpg" alt="sketch of two girls, one sleeping one reading on bus" class="gallery-item">
         </a>
 
         <a href="Images/gallery/lover-tarot-street-art.jpeg" class="mix photo" data-lightbox="gallery" data-title="Street art in Dublin">
@@ -93,12 +97,12 @@
             <img src="Images/gallery/staycity-view.jpeg" alt="view from staycity aparthotels, small balcony looks out to a road, catholic church, park and some shops." class="gallery-item">
         </a>
 
-        <a href="Images/gallery/boat-to-inishmore-group.jpeg" class="mix photo" data-lightbox="gallery" data-title="On the ferry to Inishmore">
-            <img src="Images/gallery/boat-to-inishmore-group.jpeg" alt="group on a boat in raincoats headed to Inishmore" class="gallery-item">
-        </a>
-
         <a href="Images/gallery/spinc-peak.jpeg" class="mix photo" data-lightbox="gallery" data-title="At the top of the mini Spinc loop in Glendalough">
             <img src="Images/gallery/spinc-peak.jpeg" alt="girl at the top of the mini Spinc loop in glendalough" class="gallery-item">
+        </a>
+
+        <a href="Images/illustrations/st-patricks-park-sketch.jpeg" class="mix sketch" data-lightbox="gallery" data-title="Fountain sketch at St. Patrick's Park">
+            <img src="Images/illustrations/st-patricks-park-sketch.jpeg" alt="sketch of the fountain in the park next to st. patricks cathedral" class="gallery-item">
         </a>
 
         <a href="Images/gallery/Cat-outside-sushi-shop.jpeg" class="mix photo" data-lightbox="gallery" data-title="A friendly cat in The Liberties">
@@ -122,16 +126,44 @@
             <img src="Images/illustrations/Boat-to-inishmore-sketch.jpeg" alt="drawing of the back of the ferry boat to Inishmore" class="gallery-item">
         </a>
 
-        <a href="Images/illustrations/Howth-cliffs-sketch.jpeg" class="mix sketch" data-lightbox="gallery" data-title="Sketch of the beautiful Howth Cliffs">
-            <img src="Images/illustrations/Howth-cliffs-sketch.jpeg" alt="sketch of cliffs of Howth and sea in background" class="gallery-item">
-        </a>
-
         <a href="Images/illustrations/trinity-college.jpeg" class="mix sketch" data-lightbox="gallery" data-title="Memories from Trinity College courtyard">
             <img src="Images/illustrations/trinity-college.jpeg" alt="sketch of things found in trinity college courtyard with the courtyard in the background" class="gallery-item">
         </a>
 
         <a href="Images/illustrations/st-patricks-park-sketch.jpeg" class="mix sketch" data-lightbox="gallery" data-title="Fountain sketch at St. Patrick's Park">
             <img src="Images/illustrations/st-patricks-park-sketch.jpeg" alt="sketch of the fountain in the park next to st. patricks cathedral" class="gallery-item">
+        </a>
+
+        <a href="Images/illustrations/MAP.png" class="mix sketch" data-lightbox="gallery" data-title="St. Stephens Green, Trinity, NGI and Howth">
+            <img src="Images/illustrations/MAP.png" alt="map of Dublin" class="gallery-item">
+        </a>
+
+        <a href="Images/gallery/deer.jpeg" class="mix photo" data-lightbox="gallery" data-title="Pheonix park Deer">
+            <img src="Images/gallery/deer.jpeg" alt="" class="gallery-item">
+        </a>
+
+        <a href="Images/gallery/Dublin-view.jpeg" class="mix photo" data-lightbox="gallery" data-title="Google Headquarters view">
+            <img src="Images/gallery/Dublin-view.jpeg" alt="dublin from roof of google" class="gallery-item">
+        </a>
+
+        <a href="Images/gallery/river-liffey.jpeg" class="mix photo" data-lightbox="gallery" data-title="River Liffey">
+            <img src="Images/gallery/river-liffey.jpeg" alt="" class="gallery-item">
+        </a>
+
+        <a href="Images/gallery/sarah-kinsley-sign.jpeg" class="mix photo" data-lightbox="gallery" data-title="Sarah Kinsley at the Button Factory">
+            <img src="Images/gallery/sarah-kinsley-sign.jpeg" alt="girl pointing to sarah kinsley sign" class="gallery-item">
+        </a>
+
+        <a href="Images/gallery/malahide-castle.jpeg" class="mix photo" data-lightbox="gallery" data-title="Malahide Castle">
+            <img src="Images/gallery/malahide-castle.jpeg" alt="" class="gallery-item">
+        </a>
+
+        <a href="Images/gallery/boat-to-inishmore-group.jpeg" class="mix photo" data-lightbox="gallery" data-title="On the ferry to Inishmore">
+            <img src="Images/gallery/boat-to-inishmore-group.jpeg" alt="group on a boat in raincoats headed to Inishmore" class="gallery-item">
+        </a>
+
+        <a href="Images/gallery/Deer-pheonix-park.jpg" class="mix photo" data-lightbox="gallery" data-title="Spotting deer in Phoenix Park">
+            <img src="Images/gallery/Deer-pheonix-park.jpg" alt="group in front of deer in phoenix park" class="gallery-item">
         </a>
 
     </div>
@@ -217,7 +249,7 @@
                 navToggle.setAttribute('aria-expanded', isOpen);
             } else {
                 // Desktop State: It's a Home Link
-                navToggle.setAttribute('aria-label', 'Go to Home Page');
+                navToggle.setAttribute('aria-label', 'Home');
                 navToggle.removeAttribute('aria-expanded');
             }
         }
