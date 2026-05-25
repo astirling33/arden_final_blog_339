@@ -41,16 +41,12 @@ body {
 }
 
 /* =========================
-   UNIVERSAL FOCUS STYLES
+ FOCUS STYLES
 ========================= */
 
-/* Target all focusable elements (links, buttons, inputs) */
 :focus-visible {
-    /* Remove default browser outline */
-    outline: none; 
     
-    /* Apply your brand style */
-    outline: 4px dashed #C790B4 !important;
+    outline: 4px dashed #BB77A6;
     outline-offset: 4px; /* Creates space between element and dashed line */
     border-radius: 4px;
     
@@ -77,19 +73,21 @@ a:focus-visible img {
     transition: transform 0.3s ease;
     text-decoration: none;
 
-    font-family: "Almendra", serif;
-    font-weight: 700;
+    font-family: "Amarante", serif;
+    font-weight: 400;
+    font-style: normal;
+
     font-size: 24px;
     color: #688E79;
     background-color: #ffffff;
     padding: 15px 25px;
     border-radius: 10%;
     
-    border: 3px solid #C790B4;
+    border: 3px solid #BB77A6;
 }
 .skip-link:focus {
     transform: translateY(0%);
-    color: #AAB1E4; /* Matching your hover state color */
+    color: #7B86D5; 
 }
 
 
@@ -121,6 +119,8 @@ a:focus-visible img {
     transition: transform 0.3s ease;
 }
 
+
+
 .gallery a:hover {
     transform: scale(1.02);
 }
@@ -149,28 +149,31 @@ a:focus-visible img {
 
 .control {
     
-    color: #688E79;
+    color: #06412A;
     background-color: #ffffff;
     padding: 15px 25px;
     
-    outline: 3px dotted #C790B4;
+    outline: 3px dotted #BB77A6;
     border: none;
 
-    font-family: "Almendra", serif;
-    font-weight: 700;
+    font-family: "Amarante", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+
     cursor: pointer;
     border-radius: 5px;
     transition: 0.3s ease;
 }
 
 .control:hover {
-    color: #AAB1E4;
+    color: #7B86D5;
 }
 
 /* Style for the active button */
 .mixitup-control-active {
-    outline: 4px dashed #C790B4;
-    border: 3px solid #C790B4;
+    outline: 4px dashed #BB77A6;
+    border: 3px solid #BB77A6;
 }
 
 
@@ -252,7 +255,7 @@ a:focus-visible img {
     bottom: 0.5%;
     left: -25px; 
     
-    border-left: 8px double #C790B4; 
+    border-left: 8px double #BB77A6; 
 }
 .card:nth-of-type(even) .card-text::before {
     left: auto;
@@ -309,8 +312,8 @@ a:focus-visible img {
 /* Overlay Links */
 
 .overlay-links {
-    font-family: "Almendra", serif;
-    font-weight: 700;
+    font-family: "Amarante", serif;
+    font-weight: 400;
     font-style: normal;
     font-size: 30px;
 }
@@ -329,7 +332,7 @@ a:focus-visible img {
 }
 
 .overlay-links a:hover {
-    color: #AAB1E4;
+    color: #7B86D5;
     transform: translateX(10px);
 }
 
@@ -367,8 +370,8 @@ a:focus-visible img {
 }
 
 .gallery-link {
-    font-family: "Almendra", serif;
-    font-weight: 700;
+    font-family: "Amarante", serif;
+    font-weight: 400;
     font-style: normal;
     font-size: 30px;
     text-decoration: none;
@@ -380,7 +383,7 @@ a:focus-visible img {
 }
 
 .gallery-link:hover {
-    color: #AAB1E4;
+    color: #7B86D5;
 }
 
 .gallery-link-container::after {
@@ -390,7 +393,7 @@ a:focus-visible img {
     right: 0%;
     top: 1180px;
     
-    border-top: 5px solid #D17A22; 
+    border-top: 5px solid #CE7822; 
 }
 
 /* =========================
@@ -417,15 +420,18 @@ a:focus-visible img {
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 45px !important; /* Slightly smaller for desktop row alignment */
     color: #F5F5F5;
     transition: 0.3s ease;
     text-decoration: none;
     display: block; 
 }
 
+.navbar .nav-toggle {
+    font-size: 45px
+}
+
 .nav-toggle:hover {
-    color: #AAB1E4;
+    color: #F5C21B;
     transform: translateY(-3px);
 }
 
@@ -433,8 +439,9 @@ a:focus-visible img {
 .nav-right {
     display: flex;
     gap: 30px;
-    font-family: "Almendra", serif;
-    font-weight: 700;
+    font-family: "Amarante", serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 22px;
     align-items: center; /* Ensure text is vertically centered with icon */
 }
@@ -451,7 +458,7 @@ a:focus-visible img {
 }
 
 .nav-right a:hover {
-    color: #AAB1E4;
+    color: #F5C21B;
     transform: translateY(-3px);
 }
 
@@ -468,13 +475,13 @@ a:focus-visible img {
     align-items: center;
     gap: 40px;
 
-    border-top: 5px solid #D17A22;
+    border-top: 5px solid #CE7822;
     outline: 12px double #ffffff;
 }
 
 .header-icon {
-    font-size: 80px !important;
-    color: #C790B4;
+
+    color: #BB77A6;
 
     display: flex;
     justify-content: center;
@@ -491,8 +498,12 @@ a:focus-visible img {
 
     background-color: #ffffff;
     border-radius: 5%;
-    border: 3px solid #D17A22;
-    outline: 5.5px dashed #D17A22;
+    border: 3px solid #CE7822;
+    outline: 5.5px dashed #CE7822;
+}
+
+.page-header .header-icon {
+    font-size: 80px;
 }
 
 
@@ -540,7 +551,7 @@ a:focus-visible img {
     max-width: 900px;
     height: auto;
     border-radius: 12px;
-    border: 5px solid #AAB1E4;
+    border: 5px solid #7B86D5;
 }
 
 /* =========================
@@ -552,7 +563,7 @@ footer {
     width: 100%;
     padding: 20px 0;
     overflow: hidden; /* no horizontal scroll */
-    border-top: 5px solid #D17A22;
+    border-top: 5px solid #CE7822;
 }
 
 .footer-top {
@@ -584,7 +595,7 @@ footer {
 }
 
 #myBtn:hover {
-    color: #AAB1E4;
+    color: #7B86D5;
     transform: translateX(10px); 
 }
 
@@ -610,11 +621,11 @@ footer {
 /* Colors for Icons */
 .icon-1 { color: #57638A; }
 .icon-2 { color: #207b27; }
-.icon-3 { color: #C790B4; }
-.icon-4 { color: #D17A22; }
+.icon-3 { color: #BB77A6; }
+.icon-4 { color: #CE7822; }
 .icon-5 { color: #376852; }
 .icon-6 { color: #688E79; } 
-.icon-7 { color: #AAB1E4; }
+.icon-7 { color: #7B86D5; }
 
 /* The Animation */
 @keyframes scrollIcons {
@@ -631,8 +642,9 @@ footer {
         justify-content: flex-start; /* Keep icon on left for mobile */
     }
 
-    .nav-toggle {
-        font-size: 40px !important;
+
+    .navbar .nav-toggle {
+        font-size: 40px;
     }
 
     .nav-right {
@@ -676,7 +688,7 @@ footer {
     }
 
     .nav-toggle:active {
-    color: #AAB1E4;
+    color: #7B86D5;
     }
 
     /* Card styles for mobile */
@@ -714,7 +726,7 @@ footer {
     right:0px;
     left: 0px;
     margin:auto;
-    border-top: 8px double #C790B4;
+    border-top: 8px double #BB77A6;
 
     border-left: none;
     width: 100%; 
@@ -752,8 +764,7 @@ footer {
 
     .header-icon {
     
-    font-size: 40px !important;
-    color: #C790B4;
+    color: #BB77A6;
 
     display: flex;
     justify-content: center;
@@ -770,8 +781,12 @@ footer {
 
     background-color: #ffffff;
     border-radius: 5%;
-    border: 3px solid #D17A22;
-    outline: 5.5px dashed #D17A22;
+    border: 3px solid #CE7822;
+    outline: 5.5px dashed #CE7822;
+}
+
+.page-header .header-icon{
+    font-size: 40px;
 }
 
 /* mobile home page */
@@ -836,19 +851,18 @@ footer {
 
 @media (prefers-reduced-motion: reduce) {
     /* no scrolling animation */
-    .scroller-inner {
-        animation: none !important;
-        white-space: normal !important;
+    .icon-scroller {
+        display: none;
     }
 
     /* Disables all transitions */
     *,
     *::before,
     *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
+        animation-duration: 0.01ms;
+        animation-iteration-count: 1;
+        transition-duration: 0.01ms;
+        scroll-behavior: auto;
     }
 
     /* Remove transforms that move elements */
@@ -857,11 +871,11 @@ footer {
     .nav-right a:hover,
     #myBtn:hover,
     :focus-visible {
-        transform: none !important;
+        transform: none;
     }
 
     /* Fix the skip link so it appears instantly without sliding */
     .skip-link {
-        transition: none !important;
+        transition: none;
     }
 }
