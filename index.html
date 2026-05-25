@@ -17,28 +17,31 @@
 </head>
 
 <body class="home-page">
-    <h1 class="index-title">- Arden's Travel Blog -</h1>
-    <section class="hero">
 
-        <img src="Images/illustrations/MAP.png" alt="Hero Image" class="hero-image">
+    <header>
+        <h1 class="index-title">- Arden's Travel Blog -</h1>
+    </header>
 
-        <div class="overlay-links">
-            <a href="hikes.html" class="hikes-link">Hikes</a>
-            <a href="gardens.html" class="gardens-link">Gardens</a>
-            <a href="museums.html" class="museums-link">Museums</a>
-            <a href="landmarks.html" class="landmarks-link">Landmarks</a>
+    <main>
+        <section class="hero" aria-label="Interactive map navigation">
+            <img src="Images/illustrations/MAP.png" alt="Illustrated map of Ireland with navigation links" class="hero-image">
+
+            <nav class="overlay-links" aria-label="Explore by category">
+                <a href="hikes.html" class="hikes-link">Hikes</a>
+                <a href="gardens.html" class="gardens-link">Gardens</a>
+                <a href="museums.html" class="museums-link">Museums</a>
+                <a href="landmarks.html" class="landmarks-link">Landmarks</a>
+            </nav>
+        </section>
+
+        <div class="gallery-link-container">
+            <a href="gallery.html" class="gallery-link">Gallery</a>
         </div>
+    </main>
 
-    </section>
-
-    <div class="gallery-link-container">
-        <a href="gallery.html" class="gallery-link">Gallery</a>
-    </div>
-
- <footer>
-
-    <!-- Scrolling Icon Row -->
-    <div class="icon-scroller">
+    <footer>
+        <!-- Scrolling Icon Row -->
+        <div class="icon-scroller" aria-hidden="true">
             <div class="scroller-inner">
                 <span class="material-symbols-outlined icon-1">landscape_2</span>
                 <span class="material-symbols-outlined icon-2">nature</span>
@@ -72,8 +75,7 @@
                 <span class="material-symbols-outlined icon-4">fort</span>
                 <span class="material-symbols-outlined icon-5">nest_farsight_seasonal</span>
             </div>
-    </div>
-
+        </div>
     </footer>
 
 </body>
