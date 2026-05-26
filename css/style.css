@@ -11,9 +11,8 @@ body {
     background-color: #dae1f1;
 }
 
-/* ------------ */
+
 /* fonts */
-/* ------------ */
 
 /* title */
 .almendra-bold {
@@ -23,6 +22,7 @@ body {
   font-size: 30px;
   color: #003d14;
 }
+
 /* h2 */
 
 .amarante-regular {
@@ -40,28 +40,25 @@ body {
   font-style: normal;
 }
 
-/* =========================
- FOCUS STYLES
-========================= */
+
+/* FOCUS STYLES */
 
 :focus-visible {
     
     outline: 4px dashed #BB77A6;
-    outline-offset: 4px; /* Creates space between element and dashed line */
+    outline-offset: 4px; 
     border-radius: 4px;
     
-    /* Optional: subtle lift effect */
     transform: translateY(-2px);
     transition: transform 0.2s ease, outline 0.2s ease;
 }
 
-/* Ensure images/cards with links don't have clashing outlines */
 a:focus-visible img {
-    outline: 4px dashed #F5C21B; /* Matches your card's yellow accent */
+    outline: 4px dashed #F5C21B; 
     outline-offset: 8px;
 }
 
-/* -------------------- */
+
 /* SKIP TO MAIN CONTENT */
 
 .skip-link {
@@ -91,13 +88,11 @@ a:focus-visible img {
 }
 
 
-/* =========================
-   GALLERY GRID STYLING
-========================= */
+/* GALLERY GRID STYLING */
 
 .gallery {
     display: grid;
-    /* Creates as many 250px columns as fit, then spreads them out */
+    
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     width: 100%;
@@ -119,13 +114,11 @@ a:focus-visible img {
     transition: transform 0.3s ease;
 }
 
-
-
 .gallery a:hover {
     transform: scale(1.02);
 }
 
-/* The actual image */
+/* The actual image filling parent container */
 .gallery-item {
     width: 100%;
     height: 100%;
@@ -136,7 +129,7 @@ a:focus-visible img {
 /* mix it up for the gallery */
 
 .mix {
-    display: none; /* MixItUp will toggle this to show items */
+    display: none; 
 }
 
 /* Filter Button Styling */
@@ -148,7 +141,6 @@ a:focus-visible img {
 }
 
 .control {
-    
     color: #06412A;
     background-color: #ffffff;
     padding: 15px 25px;
@@ -177,9 +169,8 @@ a:focus-visible img {
 }
 
 
-/* ------------ */
+
 /* card styles */
-/* ------------ */
 
 .card {
     display: flex;
@@ -236,12 +227,10 @@ a:focus-visible img {
     font-style: normal;
     font-size: 40px; 
     
-    /* CHANGE THESE */
     display: inline-block; 
     line-height: 1;
     color: #376852; 
 }
-
 
 .card-text p {
   font-family: "Yrsa", serif;
@@ -262,9 +251,7 @@ a:focus-visible img {
     right: -25px;
 }
 
-/* =========================
-   HOME PAGE
-========================= */
+/* HOME PAGE */
 
 .index-title {
   display: flex;
@@ -386,24 +373,13 @@ a:focus-visible img {
     color: #7B86D5;
 }
 
-.gallery-link-container::after {
-    content: "";
-    position: absolute;
-    left: 0%;    
-    right: 0%;
-    top: 1180px;
-    
-    border-top: 5px solid #CE7822; 
-}
 
-/* =========================
-   ADAPTIVE NAVBAR
-========================= */
+/* NAVBAR */
 
 .navbar {
     width: 100%;
     background-color: #376852;
-    padding: 10px 5%; /* Slightly less padding for a cleaner row */
+    padding: 10px 5%; 
     position: relative;
     z-index: 1000;
 }
@@ -411,11 +387,11 @@ a:focus-visible img {
 .nav-menu-container {
     display: flex;
     justify-content: space-between; /* This pushes icon left, links right */
-    align-items: center;           /* Keeps them perfectly centered vertically */
+    align-items: center; /* Keeps them perfectly centered vertically */
     width: 100%;
 }
 
-/* The Icon Button */
+/* The changing Icon Button */
 .nav-toggle {
     background: none;
     border: none;
@@ -426,6 +402,7 @@ a:focus-visible img {
     display: block; 
 }
 
+/* replaces !important to be more specific */
 .navbar .nav-toggle {
     font-size: 45px
 }
@@ -443,10 +420,10 @@ a:focus-visible img {
     font-weight: 400;
     font-style: normal;
     font-size: 22px;
-    align-items: center; /* Ensure text is vertically centered with icon */
+    align-items: center; /* vertically centered with icon */
 }
 
-/* Hide the word "Home" on desktop */
+/* Hide the word "Home" on desktop to just make it the icon */
 .nav-right .home-link {
     display: none;
 }
@@ -463,9 +440,7 @@ a:focus-visible img {
 }
 
 
-/* =========================
-   PAGE HEADER
-========================= */
+/* PAGE HEADER */
 
 .page-header {
     display: flex;
@@ -506,7 +481,6 @@ a:focus-visible img {
     font-size: 80px;
 }
 
-
 .page-header h1 {
   font-family: "Almendra", serif;
   font-weight: 700;
@@ -515,9 +489,7 @@ a:focus-visible img {
   color: #688E79;
 }
 
-/* =========================
-   CONTENT SECTIONS
-========================= */
+/* CONTENT SECTIONS */
 
 .content {
     padding: 40px 4%;
@@ -554,15 +526,13 @@ a:focus-visible img {
     border: 5px solid #7B86D5;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer {
     background-color:#688E79; 
     width: 100%;
     padding: 20px 0;
-    overflow: hidden; /* no horizontal scroll */
+    overflow: hidden; /* no horizontal scroll (due to icons this footer is really big */
     border-top: 5px solid #CE7822;
 }
 
@@ -582,13 +552,14 @@ footer {
     border: 3px solid #376852;
     padding: 10px 20px;
     border-radius: 10%;
+
     font-family: "Almendra", serif;
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s ease;
     
-    /* Aligning icon and text */
+    /* Alignns icon and text */
     display: flex;
     align-items: center;
     gap: 8px;
@@ -604,18 +575,18 @@ footer {
     background-color:#F5F5F5;
     width: 100%;
     padding: 20px 0;
-    white-space: nowrap;
+    white-space: nowrap; /* stays in one line */
     position: relative;
 }
 
 .scroller-inner {
     display: inline-block;
-    animation: scrollIcons 30s linear infinite; 
+    animation: scrollIcons 30s linear infinite; /* defined animation later down */
 }
 
 .scroller-inner span {
     font-size: 50px;
-    margin-right: 25px; /* Space between icons */
+    margin-right: 25px; /* Space between each icon */
 }
 
 /* Colors for Icons */
@@ -630,23 +601,22 @@ footer {
 /* The Animation */
 @keyframes scrollIcons {
     from { transform: translateX(0); }
-    to { transform: translateX(-50%); } /* Scrolls half the width of the inner div */
+    to { transform: translateX(-50%); } /* Scrolls half the width of the inner div and from earlier goes infinitley */
 }
 
-/* =========================
-   MOBILE STATE (Under 768px)
-========================= */
+/* MOBILE STATE (Under 768px) */
 
 @media (max-width: 768px) {
     .nav-menu-container {
-        justify-content: flex-start; /* Keep icon on left for mobile */
+        justify-content: flex-start; /* Keeps nav icon on left for mobile */
     }
 
-
+    /* again replaces !important */
     .navbar .nav-toggle {
         font-size: 40px;
     }
 
+    /* hides nav-right when in mobile to make a dropdown instead */
     .nav-right {
         display: none; 
         position: absolute;
@@ -667,7 +637,6 @@ footer {
         display: block; /* Bring back Home for mobile */
     }
     /* Show links when hovering over the container or navbar */
-
     .nav-right.show {
     display: flex;
     }
@@ -682,9 +651,8 @@ footer {
     background-color: #06412A;
     }
 
-
     .nav-right .home-link {
-    display: block; /* Show Home link on mobile */
+    display: block; /* Show Home link with the other links on mobile */
     }
 
     .nav-toggle:active {
@@ -704,11 +672,10 @@ footer {
     }
 
     .card img{
-        order: 1;
+        order: 1; /* reorders for mobile so every card is image then text */
         aspect-ratio: 1;
         object-fit: cover;
         width: 100%
-        
     }
 
     .card-text {
@@ -718,7 +685,8 @@ footer {
         gap: 10px;
     }
 
-    .card-text::before {
+    /* makes line horizontal */
+    .card-text::before { 
     content: "";
     position: absolute;
 
@@ -728,10 +696,11 @@ footer {
     margin:auto;
     border-top: 8px double #BB77A6;
 
-    border-left: none;
+    border-left: none; /* gets rid of extra line that was showing up */
     width: 100%; 
 }
 
+/* uses pseudo class to reorder for even cards for mobile */
 .card:nth-of-type(even) .card-text::before {
     right: 0;
     left: 0;
@@ -739,8 +708,6 @@ footer {
 }
 
 /* responsive nav and header */
-
-
 
     .nav-right {
         gap: 15px;
@@ -756,7 +723,6 @@ footer {
     }
 
     .page-header h1 {
-        
         font-size: 40px;
     }
 
@@ -794,7 +760,7 @@ footer {
     font-size: 32px;
 }
 .hero{
-    height: 70vh
+    height: 70vh /* changes for screen height */
 }
 
 .hero-image {
@@ -829,27 +795,24 @@ footer {
     bottom: 59%;
 }
 
-.gallery-link-container::after{
-    display: none;
-}
 
 /* footer */
 
 .footer-top {
-    display: none;
+    display: none; /* gets rid of skip to top (should I put back in?)
 }
 
 /* skip to main content not needed */
-
 .skip-link {
         display: none;
     }
 
 }
 
-/* reduced motion */
+/* reduced motion, I put this last so it can override */
 
 @media (prefers-reduced-motion: reduce) {
+
     /* no scrolling animation */
     .icon-scroller {
         display: none;
@@ -878,4 +841,4 @@ footer {
     .skip-link {
         transition: none;
     }
-}
+}}
